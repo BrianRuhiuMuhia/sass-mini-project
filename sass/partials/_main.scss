@@ -1,0 +1,24 @@
+@import "./mixin";
+.main{
+@include flex(column);
+font-family: Arial, Helvetica, sans-serif;
+gap:2em;
+margin-block:2em;
+}
+.main{
+    .section{
+@include flex(row);
+font-weight: 100;
+color:lighten(black,50%);
+font-size: 1em;
+line-height: 2em;
+gap:1em;
+    }
+}
+@media screen and (max-width:600px) {
+    .main{
+        .section{
+    @include flex(column)
+        }
+    }
+}
